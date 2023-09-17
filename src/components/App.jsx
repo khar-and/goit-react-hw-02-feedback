@@ -30,8 +30,8 @@ export class App extends Component {
     const variants = Object.keys(this.state);
     const { good, neutral, bad } = this.state;
     const totalFeedback = this.countTotalFeedback();
-    const positivePercent = this.countPositiveFeedbackPercentage();
-    // console.log(positivePercent);
+    const positivePercentage = this.countPositiveFeedbackPercentage();
+
     return (
       <div>
         <Section title="Please leave feedback">
@@ -48,7 +48,7 @@ export class App extends Component {
               neutral={neutral}
               bad={bad}
               total={totalFeedback}
-              positivePercentage={positivePercent}
+              positivePercentage={positivePercentage}
             />
           ) : (
             <Notification message="There is no feedback" />
